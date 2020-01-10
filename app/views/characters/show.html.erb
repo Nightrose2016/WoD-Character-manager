@@ -1,8 +1,8 @@
-<%=link_to "logout", destroy_user_session_path %><br>
+<%=  %><br>
 <h1><%= @character.character_name %></h1>
     <%= link_to "Edit Character", edit_world_character_path(@character) %>
     <%= link_to "back to world", world_path %>
-
+    <%= link_to "homepage" , root_path%>
     
     <h3>Vitals</h3><br><br>
     <li><strong> total health: </strong><%= @character.health %></li>

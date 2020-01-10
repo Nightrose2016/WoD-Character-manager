@@ -1,7 +1,7 @@
 <h1>Hello! Welcome to the World of Darkness Character manager!<h1>
-<h3>Greatings <%= current_user.email %><h3><br>
 <% if user_signed_in? %>
-    <%= link_to "logout", destroy_user_session_path %>
+    <h3>Greatings <%= current_user.email %><h3><br>
+    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
     <%= link_to "edit user", edit_user_registration_path %><br>
     <%= link_to "worlds list", worlds_path %>
 <% else %>

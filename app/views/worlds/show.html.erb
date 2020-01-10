@@ -1,7 +1,8 @@
-<%=link_to "logout", destroy_user_session_path %>
+<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
 <h1><%= @world.name %></h1>
 <%= link_to "World List", worlds_path %>
 <%= link_to "Edit World", edit_world_path(@world) %>
+<%= link_to "homepage" , root_path %>
 
 <div class="characters">
     <h5><%= link_to "create new character", new_world_character_path(@world) %> 
