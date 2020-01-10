@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_many :characters
   has_many :worlds, through: :characters
+
+  validates :email, uniqueness: true
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
