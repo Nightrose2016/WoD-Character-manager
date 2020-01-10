@@ -1,2 +1,10 @@
-<h1>Worlds#show</h1>
-<p>Find me in app/views/worlds/show.html.erb</p>
+<%=link_to "logout", logout_path%>
+<h1><%= @world.name %></h1>
+<%= link_to "World List", worlds_path %>
+<%= link_to "Edit World", edit_world_path(@world) %>
+
+<div class="characters">
+    <h5><%= link_to "create new character", new_world_character_path(@world) %> 
+    <% @world.characters.each do |character| %>
+        <h5><%= link_to character.character_name, world_character_path(character) %></h5>
+    <% end %></div>
