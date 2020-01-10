@@ -1,2 +1,53 @@
-<h1>Characters#show</h1>
-<p>Find me in app/views/characters/show.html.erb</p>
+<%=link_to "logout", destroy_user_session_path%><br>
+<h1><%= @character.character_name %></h1>
+    <%= link_to "Edit Character", edit_character_path(@character) %>
+    <%= link_to "back to world", world_path(@world) %>
+
+    
+    <h3>Vitals</h3><br><br>
+    <li><strong> total health: </strong><%= @character.health %></li>
+    <li><strong> total exp: </strong><%= @character.exp %></li>
+    
+    <h3>Attributes</h3><br><br>
+    <h5>Power</h5><br>
+    <li><strong> intelligence: </strong><%= @character.intelligence %></li>
+    <li><strong> strength: </strong><%= @character.strength %></li>
+    <li><strong> presence: </strong><%= @character.presence %></li>
+    <h5>Finesse<h5><br>
+    <li><strong> wits: </strong><%= @character.wits %></li>
+    <li><strong> dexterity: </strong><%= @character.dexterity %></li>
+    <li><strong> manipulation: </strong><%= @character.manipulation %></li>
+    <h5>Resistance</h5><br>
+    <li><strong> resolve: </strong><%= @character.resolve %></li>
+    <li><strong> stamina: </strong><%= @character.stamina %></li>
+    <li><strong> composure: </strong><%= @character.composure %></li>
+    <h3>Skills</h3><br><br>
+    <h5>Mental</h5><br>
+    <li><strong> academics: </strong><%= @character.academics %></li>
+    <li><strong> computer: </strong><%= @character.computer %></li>
+    <li><strong> crafts: </strong><%= @character.crafts %></li>
+    <li><strong> investigation: </strong><%= @character.investigation %></li>
+    <li><strong> medicine: </strong><%= @character.medicine %></li>
+    <li><strong> occult: </strong><%= @character.occult %></li>
+    <li><strong> politics: </strong><%= @character.politics %></li>
+    <li><strong> science: </strong><%= @character.science %></li>
+    <h5>Physical</h5><br>
+    <li><strong>athletics: </strong><%= @character.crafts %></li>
+    <li><strong> brawl: </strong><%= @character.brawl %></li>
+    <li><strong> drive: </strong><%= @character.drive %></li>
+    <li><strong> firearms: </strong><%= @character.firearms %></li>
+    <li><strong> larceny: </strong><%= @character.larceny %></li>
+    <li><strong> stealth: </strong><%= @character.stealth %></li>
+    <li><strong> survival: </strong><%= @character.survival %></li>
+    <li><strong> weaponry: </strong><%= @character.weaponry %></li>
+    <h5>Social</h5><r>
+    <li><strong> animal ken: </strong><%= @character.animal_ken %></li>
+    <li><strong> empathy: </strong><%= @character.empathy %></li>
+    <li><strong> expression: </strong><%= @character.expression %></li>
+    <li><strong> intimidation: </strong><%= @character.intimidation %></li>
+    <li><strong> persuasion: </strong><%= @character.persuasion %></li>
+    <li><strong> socialize: </strong><%= @character.socialize %></li>
+    <li><strong> streetwise: </strong><%= @character.streetwise %></li>
+    <li><strong> subtlefuge: </strong><%= @character.subtlefuge %></li><br><br>
+
+    <%= link_to "Edit Character", edit_character_path(@character) %>
