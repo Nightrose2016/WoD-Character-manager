@@ -1,4 +1,4 @@
-<%=link_to "logout", logout_path%>
+<%=link_to "logout", destroy_user_session_path %>
 <h1><%= @world.name %></h1>
 <%= link_to "World List", worlds_path %>
 <%= link_to "Edit World", edit_world_path(@world) %>
