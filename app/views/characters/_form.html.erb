@@ -1,0 +1,86 @@
+<%= form_for @character do |f| %>
+    <%= f.label :character_name %>
+    <%= f.text_field :character_name %><br><br>
+    <%= f.label :health %>
+    <%= f.number_field :health %>
+    <%= f.label :exp %>
+    <%= f.number_field :exp %><br><br>
+    <h3>attributes<h3>
+    <h5>power<h5>
+    <%= f.label :intelligence %>
+    <%= f.number_field :intelligence %>
+    <%= f.label :strength %>
+    <%= f.number_field :strength %>
+    <%= f.label :presence %>
+    <%= f.number_field :presence %><br><br>
+    <h5>fitness<h5>
+    <%= f.label :wits %>
+    <%= f.number_field :wits %>
+    <%= f.label :dexterity %>
+    <%= f.number_field :dexterity %>
+    <%= f.label :manipulation %>
+    <%= f.number_field :manipulation %><br><br>
+    <h5>resistance<h5>
+    <%= f.label :resolve %>
+    <%= f.number_field :resolve %>
+    <%= f.label :stamina %>
+    <%= f.number_field :stamina %>
+    <%= f.label :composure %>
+    <%= f.number_field :composure %><br><br>
+    <h3>skills<h3>
+    <h5>mental<h5>
+    <%= f.label :academics %>
+    <%= f.number_field :academics %>
+    <%= f.label :computer %>
+    <%= f.number_field :computer %>
+    <%= f.label :crafts %>
+    <%= f.number_field :crafts %>
+    <%= f.label :investigation %>
+    <%= f.number_field :investigation %>
+    <%= f.label :medicine %>
+    <%= f.number_field :medicine %>
+    <%= f.label :occult %>
+    <%= f.number_field :occult %>
+    <%= f.label :politics %>
+    <%= f.number_field :politics %>
+    <%= f.label :science %>
+    <%= f.number_field :science %><br><br>
+    <h5>physical<h5>
+    <%= f.label :athletics %>
+    <%= f.number_field :athletics %>
+    <%= f.label :brawl %>
+    <%= f.number_field :brawl %>
+    <%= f.label :drive %>
+    <%= f.number_field :drive %>
+    <%= f.label :firearms %>
+    <%= f.number_field :firearms %>
+    <%= f.label :larceny %>
+    <%= f.number_field :larceny %>
+    <%= f.label :stealth %>
+    <%= f.number_field :stealth %>
+    <%= f.label :survival %>
+    <%= f.number_field :survival %>
+    <%= f.label :weaponry %>
+    <%= f.number_field :weaponry %><br><br>
+    <h5>social<h5>
+    <%= f.label :animal_ken %>
+    <%= f.number_field :animal_ken %>
+    <%= f.label :empathy %>
+    <%= f.number_field :empathy %>
+    <%= f.label :expression %>
+    <%= f.number_field :expression %>
+    <%= f.label :intimidation %>
+    <%= f.number_field :intimidation %>
+    <%= f.label :persuasion %>
+    <%= f.number_field :persuasion %>
+    <%= f.label :socialize %>
+    <%= f.number_field :socialize %>
+    <%= f.label :streetwise%>
+    <%= f.number_field :streetwise %>
+    <%= f.label :subtlefuge %>
+    <%= f.number_field :subtlefuge %>
+    <%= hidden_field_tag name="character[user_id]", value=current_user.id %><br><br>
+    <%= f.label :world %><br>
+    <%= f.collection_select :world_id, World.all, :id, :name, include_blank: "World" -%>
+    <%= f.submit 'submit character' %>
+<% end %>
