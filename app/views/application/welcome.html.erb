@@ -1,4 +1,10 @@
 <h1>Hello! Welcome to the World of Darkness Character manager!<h1>
+<h3>Greatings <%= current_user.email %><h3b>
+<% if user_signed_in? %>
+    <%= link_to "logout", destroy_user_session_path %>
+    <%= link_to "edit user", edit_user_registration_path %>
+<% else %>
+    <%= link_to "sign in", new_user_session_path %><br>
+    <%= link_to "sign up", new_user_registration_path %>
+<% end %>
 
-<%= link_to "sign in", new_user_session_path %><br>
-<%= link_to "sign up", new_user_registration_path %>
