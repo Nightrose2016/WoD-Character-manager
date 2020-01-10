@@ -1,0 +1,1 @@
+Rails.application.config.session_store :active_reccord_store, key: '_devise-omniauth_session'
