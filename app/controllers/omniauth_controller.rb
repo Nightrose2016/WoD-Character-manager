@@ -9,4 +9,9 @@ class OmniauthController < ApplicationController
             redirect_to new_user_registration_url
         end
     end
+
+    def failure
+        flash[:error] = 'There was a problem signing you in. please register or try again later'
+        redirect_to new_user_registration_url
+    end
 end
