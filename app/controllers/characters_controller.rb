@@ -37,8 +37,6 @@ class CharactersController < ApplicationController
       render 'edit'
     end
   end
-    
-    
 
   private
   def character_params
